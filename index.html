@@ -1614,6 +1614,12 @@
           </div>
         </div>
 
+    
+
+
+
+
+
         <aside class="hero-panel" aria-label="候选人能力概览">
           <div class="panel-head">
             <p class="panel-title">AI Product Operating System</p>
@@ -1853,7 +1859,7 @@
           <button class="library-tab" type="button" data-filter="enterprise">企业效率</button>
           <button class="library-tab" type="button" data-filter="service">客服对话</button>
           <button class="library-tab" type="button" data-filter="companion">情感陪伴Agent</button>
-          <button class="library-tab" type="button" data-filter="research">学术研究</button>
+   
         </div>
         <p class="library-note" id="libraryNote">全部项目：覆盖营销增长、企业效率、客服对话、情感陪伴和 AI for Code 研究，展示我对不同 AI 场景边界的理解。</p>
 
@@ -1979,25 +1985,7 @@
             </div>
           </article>
 
-          <article class="library-card" data-category="research">
-            <div class="project-tags">
-              <span class="tag">学术研究</span>
-              <span class="tag green">AI for Code</span>
-            </div>
-            <div>
-              <h3>跨语言代码检索研究</h3>
-              <p class="project-meta">基于 LLM 摘要增强和全局对比学习的跨语言代码检索框架。</p>
-            </div>
-            <div class="library-fields">
-              <div class="library-field"><strong>适用场景</strong><p>IDE 智能检索、代码资产复用、跨语言迁移辅助、AI 编程助手召回。</p></div>
-              <div class="library-field"><strong>痛点</strong><p>关键词检索难以识别跨语言语义等价代码，开发者复用成本高。</p></div>
-              <div class="library-field"><strong>工作流拆解</strong><p>代码摘要生成 - 查询/代码 embedding - 跨语言语义对齐 - 相似度检索 - 结果评估。</p></div>
-              <div class="library-field"><strong>我的产品判断</strong><p>AI PM 不必只会搭应用，也要理解 embedding、召回质量和评测指标如何影响产品体验。</p></div>
-            </div>
-            <div class="project-actions">
-              <button class="button-primary button small" type="button" data-screenshots="code-research.png">查看工作流截图</button>
-            </div>
-          </article>
+          
         </div>
       </div>
     </section>
@@ -2006,51 +1994,93 @@
       <div class="page-container">
         <div class="section-head">
           <p class="eyebrow">Research Translation</p>
-          <h2 class="section-title">学术研究如何转化成产品价值</h2>
+          <h2 class="section-title">AI for Code：AI 检索产品设计</h2>
           <p class="section-subtitle">
-            论文不是只写算法细节，而是证明我能理解模型能力、检索链路和开发者工具场景。
+            学术研究如何转化成产品价值
           </p>
         </div>
 
         <div class="research-layout">
           <article class="research-card">
-            <h3 class="paper-title">Lost in Translation, Found in Summary: An End-to-End Framework for Cross-Language Code Retrieval</h3>
+            <h3 class="paper-title">CodeBridge｜跨语言代码语义检索与克隆检测工具</h3>
             <p class="paper-summary">
-              研究问题：当开发者用一种编程语言表达需求时，如何从另一种语言的大量代码中检索到语义等价的实现。方法上通过 LLM 摘要增强代码语义，并用全局对比学习把不同语言的代码对齐到更统一的 embedding 空间。
+              
             </p>
             <ul class="value-list">
               <li>
-                <strong>HR 能理解的价值</strong>
-                <span>让“找代码”从关键词匹配变成语义匹配，帮助开发者跨语言复用经验，降低迁移和学习成本。</span>
+                <strong>瓶颈和解决思路</strong>
+                <span>缺乏不同语言的平行数据集用于模型训练，因此通过<b>自然语言中间表示作为桥梁</b>，跨越语言鸿沟，直击语义，使得不同语言的代码可以进行比较，进而采用聚类算法构造伪标签。</span>
               </li>
               <li>
                 <strong>产品场景</strong>
-                <span>可落到 IDE 智能检索、企业代码资产复用、跨语言迁移辅助、AI 编程助手的上下文召回。</span>
+                <span>开发者在大型多语言代码库中，想找到<b>“功能相似但语言不同”</b>的代码片段。帮助开发者进行<b>代码复用、迁移审查、重复逻辑识别和代码资产管理</b>。</span>
               </li>
               <li>
-                <strong>我的差异化优势</strong>
-                <span>不仅会搭 Agent，也理解 LLM 摘要、向量检索、embedding 对齐和评价指标背后的产品影响。</span>
+                <strong>模型效果指标</strong>
+                <span>项目本质上是一个检索与排序任务，重点关注：
+                      <br><b>MRR：正确结果是否排在更靠前的位置</b>
+                      <br><b>MAP：整体检索结果的平均排序质量</b>
+                      </span>
+              </li>
+              <li>
+                <strong>产品体验指标</strong>
+                <span>查询成功率：用户输入代码后，是否能得到有效相似代码
+                      <br>Top-K 点击率：用户是否点击了前几条结果
+                      <br>结果采纳率：用户是否复制、收藏、引用或复用了检索到的代码
+                      <br>平均检索耗时：从输入代码到返回结果的时间
+                      <br>用户满意度：开发者是否认为结果相关、可理解、可复用
+                      </span>
               </li>
             </ul>
           </article>
 
           <aside class="map-card" aria-label="跨语言代码检索方法图">
-            <div class="map-stage">
-              <div class="map-line l1"></div>
-              <div class="map-line l2"></div>
-              <div class="map-line l3"></div>
-              <div class="map-line l4"></div>
-              <div class="map-point p1"><strong>Python</strong>函数实现</div>
-              <div class="map-point p2"><strong>Java</strong>等价逻辑</div>
-              <div class="map-point p3"><strong>Query</strong>自然语言需求</div>
-              <div class="map-point p4"><strong>Summary</strong>LLM 语义摘要</div>
-              <div class="map-core">统一语义空间<br>Embedding</div>
-            </div>
-            <div class="detail-row">
-              <strong>一句话解释 embedding</strong>
-              <p>把代码、摘要和查询都变成向量，让系统可以比较“语义距离”，而不是只看表面词是否相同。</p>
-            </div>
-          </aside>
+  <div class="map-stage">
+    <svg class="map-svg" viewBox="0 0 760 360" aria-hidden="true" preserveAspectRatio="none">
+      <!-- 左上 Python -> 中心 -->
+      <line x1="170" y1="92" x2="304" y2="145"></line>
+
+      <!-- 右上 Java -> 中心 -->
+      <line x1="530" y1="86" x2="456" y2="145"></line>
+
+      <!-- 左下 Query -> 中心 -->
+      <line x1="185" y1="268" x2="305" y2="228"></line>
+
+      <!-- 右下 Summary -> 中心 -->
+      <line x1="515" y1="286" x2="458" y2="228"></line>
+    </svg>
+
+    <div class="map-point p1">
+      <strong>Python</strong>
+      <span>函数实现</span>
+    </div>
+
+    <div class="map-point p2">
+      <strong>Java</strong>
+      <span>等价逻辑</span>
+    </div>
+
+    <div class="map-point p3">
+      <strong>Query</strong>
+      <span>自然语言需求</span>
+    </div>
+
+    <div class="map-point p4">
+      <strong>Summary</strong>
+      <span>LLM 语义摘要</span>
+    </div>
+
+    <div class="map-core">
+      <strong>统一语义空间</strong>
+      <span>Embedding</span>
+    </div>
+  </div>
+
+  <div class="detail-row">
+    <strong>Embedding</strong>
+    <p>将代码、摘要和查询统一编码为向量，并通过相似度计算实现跨语言语义对齐与检索。</p>
+  </div>
+</aside>
         </div>
       </div>
     </section>
